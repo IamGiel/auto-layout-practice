@@ -1,6 +1,6 @@
 import UIKit
 
-let defaults =  UserDefaults.standard;
+let defaults =  UserDefaults.standard; // singleton
 let urlKey = "some url key";
 let floatValue = "floatValue";
 let boolValue = "setItToTrue";
@@ -16,6 +16,10 @@ let callBoolValue = defaults.bool(forKey: boolValue)
 let callArrayCollection = defaults.array(forKey: "theArray")
 
 //its not adviseable to use large data or collection to save in userDefaults.  Because userDefaults are saved only in the plist file and collections can consume more memory in that file and will be hard to maintain.  Usually, userDefaults are small data like a float or a boolean setter.
+
+//to access data in the userDefaults in plist file, swift would have to load all the data in thats stored in it and as you can imagin, will consume longer load times and performance hits
+
+
 
 
 //let ageOfDogs = [1,2,3,4,5,6,7,8,9,10];
